@@ -4,14 +4,15 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <transition-group name="router">
+    <!-- 注意这里要加上mode="out-in"，防止出现闪屏 -->
+    <transition name="router" mode="out-in">
       <router-view key="$route.fullPath" />
-    </transition-group>
+    </transition>
   </div>
 </template>
 <style lang="scss">
 .router-enter {
-  transform: translateX(40px);
+  transform: translateX(20px);
   opacity: 0;
 }
 .router-enter-active {
@@ -29,7 +30,7 @@
   transition: all 0.3s ease;
 }
 .router-leave-to {
-  transform: translateX(40px);
+  transform: translateX(20px);
   opacity: 0;
 }
 

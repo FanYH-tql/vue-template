@@ -1,4 +1,6 @@
-const state = {};
+const state = {
+  username: "fyh"
+};
 
 const mutations = {};
 
