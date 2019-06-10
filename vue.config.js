@@ -11,7 +11,7 @@ module.exports = {
     config.resolve.alias.set("@", resolve("src"));
   },
   // 打包时不生成.map文件
-  prodcutionSourceMap: false,
+  // prodcutionSourceMap: false,
   // 跨域
   devServer: {
     proxy: "http://localhost:8080"
